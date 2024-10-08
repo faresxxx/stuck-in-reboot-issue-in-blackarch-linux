@@ -6,8 +6,10 @@
 
 **1. Boot into a Live Environment :** 
 the easiest way to troubleshoot is to use an Arch Linux live USB environment. This allows you to access your filesystem without restrictions.
+
 **2. Boot from the Live USB :**
 Insert the live USB and boot your computer from it. You may need to change the boot order in your BIOS/UEFI settings to boot from the USB.
+
 **3. Open a Terminal :**
 Use `lsblk` to identify your partitions. Look for your encrypted root partition and the EFI partition.
 
