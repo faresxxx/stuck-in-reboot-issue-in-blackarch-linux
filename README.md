@@ -199,14 +199,17 @@ Rebuild the Initramfs:
  **Reboot and Test**
 > ## "vmlinuz-linux is not recognized as an internal command"
 The error indicates that the UEFI Shell is not able to directly run the kernel file (`vmlinuz-linux`) as an executable. This can occur if the UEFI Shell can't access or locate the file correctly, or if the UEFI shell lacks support for directly executing ELF (Executable and Linkable Format) binaries like the Linux kernel.
+
 **1. List Available Filesystems :**
 
     map -r
 This will list all the available file systems like `FS0:`, `FS1:`, etc.
+
 **2. Switch to the Correct Filesystem :**
 
     FS0:
 If `FS0:` doesn’t contain the kernel, try other file systems like `FS1:`, etc., until you locate the partition containing `/vmlinuz-linux` and `/initramfs-linux.img`.
+
 **3. Navigate to the Directory Containing the Kernel :**
 
     ls
